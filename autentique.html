@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- -----------------------en tete de la page -------------------------- -->
+    <header>
+        <div class="contener">
+            <div class="nav_bar">
+                <div class="logo">
+                    <P>bams_store</P>
+                </div>
+                <ul>
+                    <li><a href="index.html"> <span>acceil</span></a></li>
+                    <li><a href="produits.html">nos produits</a></li>
+                    <li><a href="single_produits.html"> single produits</a></li>
+                    <li><a href="autentique.html">compte</a></li>
+                    <i class='bx bx-shopping-bag' id="bag"></i>
+
+                </ul>
+
+            </div>
+            <!-- -----pour le responsive---------- -->
+            <div class="header_mobile">
+                <p>logo</p>
+                <i class='bx bx-menu' id="menu_toogle"></i>
+            </div>
+            <ul class="link-toogle">
+                <li><a href="index.html"> <span>acceil</span></a></li>
+                    <li><a href="produits.html">nos produits</a></li>
+                    <li><a href="single_produits.html"> single produits</a></li>
+                    <li><a href="autentique.html">compte</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="acount_page">
+        <div class="contener">
+            <div class="row">
+                <div class="col_2">
+                    <img src="Images site ecommerce/image1.png" alt="">
+                </div>
+                <div class="col_2">
+                    <div class="contener_form">
+                        <div class="form_btn">
+                            <span onclick="conect()">connexion</span>
+                            <span onclick="inscrit()">incription</span>
+                            <hr id="indication">
+                        </div>
+                        <form id="connexion">
+                            <input type="email" placeholder="email">
+                            <input type="password" placeholder="password">
+                           <button type="submit">envoyer</button>
+                           <a href="">mot de passe oublier</a>
+                        </form>
+                        <form id="incription">
+                            <input type="text" placeholder="users name">
+                            <input type="email" placeholder="email">
+                            <input type="password" placeholder="password">
+                           <button type="submit">envoyer</button>
+                        </form>
+
+
+           
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="contener">
+            <div class="row">
+                <div class="app">
+                    <h4>telecharger notre aplication</h4>
+                    <div class="img_app">
+                        <img src="Images site ecommerce/play-store.png" alt="" width="150px">
+                        <img src="Images site ecommerce/app-store.png" alt="" width="150px">
+                    </div>
+                </div>
+
+                <div class="politique">
+                    <h4>politique de confidencialites</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur <br> elit. Assumenda
+                        dolore, quaerat iste, <br>vero minima? Voluptatum ipsa fuga .</p>
+                </div>
+
+                <div class="lien_socciaux">
+                    <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
+                    <li><a href=""><i class='bx bxl-facebook-circle'></i></a></li>
+                    <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
+                </div>
+                <div class="lien_du_site">
+                    <h3>les liens du site : </h3>
+                    <li><a href="index.html"> <span>acceil</span></a></li>
+                    <li><a href="produits.html">nos produits</a></li>
+                    <li><a href="single_produits.html"> single produits</a></li>
+                    <li><a href="autentique.html">compte</a></li>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </footer>
+
+
+
+
+
+    <Script>
+        //  ------------- header media queries----------------
+
+        const myul = document.querySelector(".link-toogle");
+        const mymenu = document.getElementById('menu_toogle');
+
+        mymenu.addEventListener("click", () => {
+            myul.classList.toggle("is-visible")
+        })
+    </Script>
+
+  <script>
+    var connexion = document.getElementById("connexion");
+    var incription = document.getElementById("incription");
+    var indication = document.getElementById("indication");
+
+   function conect() {
+    connexion.style.transform = "translateX(0px)";
+    incription.style.transform = "translateX(0px)";
+    indication.style.transform = "translateX(100px)";
+
+   
+   }
+   function inscrit() {
+    connexion.style.transform =" translateX(300px)";
+    incription.style.transform = "translateX(300px)";
+    indication.style.transform = "translateX(0px)";
+
+   }
+  </script>
+
+
+
+
+</body>
+
+</html>
